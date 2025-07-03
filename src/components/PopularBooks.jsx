@@ -18,7 +18,7 @@ const PopularBooks = ({books}) => {
 
     // ))}
     // </div> */}
-     <h1 className="text-xl md:text-2xl font-bold text-center bg-cyan-300 p-3">POPULAR BOOKS ({popular_books.length})</h1>
+     <h1 className="text-xl md:text-2xl font-bold text-center bg-cyan-300 p-3">POPULAR BOOKS (<span className="text-cyan-700">{popular_books.length}</span>)</h1>
     <div className="flex flex-wrap justify-center items-center my-7 ">
 
       {popular_books.map((book) => (

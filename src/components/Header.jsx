@@ -38,7 +38,7 @@ const Header = () => {
         ></i>
         {/* hamburger navbar */}
         {show && (
-          <ul onClick={handleClick} className="hamburger border md:hidden w-[87%] sm:w-[77%] text-center  h-[200px] sm:h-[220px] gap-3 mt-3 sm:mt-1  p-3  ml-1 flex flex-col justify-center items-center md:flex-row md:justify-start md:items-center   bg-pink-300 md:bg-transparent   font-bold text-gray-700 sm:text-xl ">
+          <ul onClick={handleClick} className="hamburger md:hidden w-[87%] sm:w-[77%] text-center  h-[200px] sm:h-[220px] gap-3 mt-3 sm:mt-1  p-3  ml-1 flex flex-col justify-center items-center md:flex-row md:justify-start md:items-center   bg-pink-300 md:bg-transparent   font-bold text-gray-700 sm:text-xl ">
             <Link to="/">
               <li className="hover:text-cyan-300 transition duration-300 ">
                 Home

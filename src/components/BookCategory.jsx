@@ -19,7 +19,7 @@ const BookCategory = ({books}) => {
 
   return (
     <div>
-      <h1 className='text-xl md:text-2xl font-bold text-center bg-cyan-300 p-3 '>Books by Categories ({single_category.length})</h1>
+      <h1 className='text-xl md:text-2xl font-bold text-center bg-cyan-300 p-3 '>Books by Categories (<span className='text-cyan-700'>{single_category.length}</span>)</h1>
       <ul className=' w-screen my-5 flex flex-wrap justify-center items-center'>
         {single_category.map(category =>{
           const cat = category.trim().toLocaleLowerCase();
