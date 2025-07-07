@@ -91,3 +91,9 @@ body {
 /* .hamburger ul li:hover{
   background-color: red;
 } */
+
+/* header text shadow */
+.h-txt-shadow{
+  /* text-shadow: 4px 3px 1px #CCCCCC; */
+  text-shadow: -1px 2px 1px #737272;
+}

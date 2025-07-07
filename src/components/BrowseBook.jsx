@@ -82,7 +82,7 @@ const BrowseBook = () => {
             >
               <li
                 key={book.id}
-                className="  text-gray-800 bg-cyan-300 text-center hover:bg-pink-400 hover:text-white hover:scale-105 transition duration-300 m-2  p-3"
+                className="shadow-md  text-gray-900 bg-cyan-300 text-center hover:bg-pink-400 hover:text-white/90 hover:scale-105 transition duration-300 m-2  p-3"
               >
                 <span className="font-bold">{book.title}</span> <br></br> (
                 {book.category})

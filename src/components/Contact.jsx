@@ -1,5 +1,15 @@
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate()
+
+  const handleSubmit  = () => {
+    alert("Thank you for reaching out! We'll get back to you soon.");
+    navigate("/")
+  }
+
+
+
   return (
     <section className="bg-transparent w-screen h-[150%] py-11 px-1 flex items-center justify-center mt-[50px]">
       <div className="gradient w-[70%] mx-auto rounded-xl shadow-lg p-7 md:p-13 py-22">
@@ -60,7 +70,8 @@ const Contact = () => {
           {/* Submit Button */}
           <div className="text-center">
             <button
-              type="submit"
+            onClick={handleSubmit}
+              // type="submit"
               className="bg-cyan-600 text-white font-medium px-8 py-3 rounded-lg shadow hover:bg-cyan-700 transition duration-300 hover:text-orange-400"
             >
               Send Message

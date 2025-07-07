@@ -7,7 +7,7 @@ import { UpdateLocalStorage } from '../utils/UpdateLocalStorage.jsx';
 
 // localStorage.setItem('books', JSON.stringify(books) )
 const HomePage = () => {
-  const books = UpdateLocalStorage()
+  const [books, setBooks] = UpdateLocalStorage()
   //  const [books, setBooks] = useState([]);
 
 

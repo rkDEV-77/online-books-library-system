@@ -18,12 +18,12 @@ const PopularBooks = ({books}) => {
 
     // ))}
     // </div> */}
-     <h1 className="text-xl md:text-2xl font-bold text-center bg-cyan-300 p-3">POPULAR BOOKS (<span className="text-cyan-700">{popular_books.length}</span>)</h1>
+     <h1 className="text-xl md:text-2xl font-bold text-center bg-cyan-500 p-3">POPULAR BOOKS (<span className="text-pink-700">{popular_books.length}</span>)</h1>
     <div className="flex flex-wrap justify-center items-center my-7 ">
 
       {popular_books.map((book) => (
 
-         <Link key={book.id} to={`/book/${book.id}`} className="w-[91%]  bg-cyan-200 p-2 m-2 shadow-xl sm:w-[45%] md:w-[30%] lg:w-[23%] transform hover:scale-105 transition duration-300 cursor-pointer">
+         <Link key={book.id} to={`/book/${book.id}`} className=" m-3 shadow-xl w-[97%] sm:w-[45%] md:w-[30%] lg:w-[22%] transform hover:scale-105 transition duration-300 cursor-pointer">
           <BookCard key={book.id}  book={book} />
         </Link>
 
