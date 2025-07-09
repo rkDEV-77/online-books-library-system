@@ -8,23 +8,11 @@ import Search from "./Search";
 const BrowseBook = () => {
   // const [search, setSearch] = useState([]);
   // const [books, setBooks] = useState([]);
+  
   const [selectedCategory, setSelectedCategory] = useState("All");
   let books = JSON.parse(localStorage.getItem('books'))
   // console.log(books);
-  
 
-// let books = UpdateLocalStorage()
-
-  // using local storage
-  //   useEffect(() => {
-  //   // Get books from localStorage
-  //   const localBooks = JSON.parse(localStorage.getItem("books")) || [];
-
-  //   // Combine both arrays
-  //   const allBooks = [...books, ...localBooks];
-
-  //   setBooks(allBooks);
-  // }, []);
 
   // Extract unique categories
   const categories = ["All", ...new Set(books.map((book) => book.category))];
@@ -58,8 +46,9 @@ const BrowseBook = () => {
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
+          {/* List all category in select input option */}
           {categories.map((cat, id) => (
-            <option className=" bg-cyan-300  scroll-auto" key={id} value={cat} >
+            <option className=" bg-cyan-300  scroll-auto w-[70%]   " key={id} value={cat} >
               {cat}
             </option>
           ))}
@@ -68,13 +57,11 @@ const BrowseBook = () => {
 
       {/* Filtered Book List */}
       <ul className="flex flex-wrap justify-center items-center m-3 p-3">
-        {/* {filteredBooks.map((book) => ( */}
+      
         {filteredBooks.map((book) => {
-          // const cat = book.category.trim().toLocaleLowerCase();
-          {
-            /* // return <Link key={book.id} to={`/browse_book/${cat}`} className='w-[90%] sm:w-[43%] md:w-[23%] lg:w-[19%] '> */
-          }
+       
           return (
+            // List all boks and take to /books/book.id page on click
             <Link
               key={book.id}
               to={`/book/${book.id}`}
@@ -90,11 +77,7 @@ const BrowseBook = () => {
             </Link>
           );
         })}
-        {/* // ********************************
-          // // <Link to={`/browse_book/:${book.category}`}>
-          // <li className='m-3 p-3 w-[47%] sm:w-[37%] md:w-[27%] lg:w-[17%] bg-gray-300 hover:bg-cyan-300 transform hover:scale-105 transition duration-300 cursor-pointer text-center shadow-md' key={book.id}>{book.title} <br></br> ({book.category})</li>
-          // // </Link>
-        // ))} */}
+      
       </ul>
     </div>
   );

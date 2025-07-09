@@ -208,10 +208,12 @@ import React, { useState } from "react";
 const BookCard = ({ book }) => {
   const [show, setShow] = useState(false);
 
+  // toggle show state
   const handleDescription = (e) => {
     e.preventDefault();
     setShow(!show);
   };
+
 
   return (
     <div className="  flex justify-center">

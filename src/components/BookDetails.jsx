@@ -6,11 +6,16 @@ import { UpdateLocalStorage } from "../utils/UpdateLocalStorage";
 const BookDetails = () => {
   const navigate = useNavigate();
   const params = useParams();
+
+  // fetching data from UpdateLocalStorage component
   const [books, setBooks] = UpdateLocalStorage();
+
+  // filter book with Id
   const bookDetails = books.filter((book) => book.id == params.id);
 
   if (!bookDetails.length) return <p className="text-center mt-20">Book not found.</p>;
 
+  // Above bookDetails storeded in an array so getting first value of bookDetails array
   const book = bookDetails[0];
 
   return (
@@ -22,7 +27,7 @@ const BookDetails = () => {
       <img
         src={book.coverImage}
         alt="book-cover"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-fill"
       />
     </div>
 
@@ -47,7 +52,7 @@ const BookDetails = () => {
         <p className="text-gray-700 text-sm sm:text-md mb-1">
           <strong className="text-cyan-600">Rating:</strong> {book.rating}
         </p>
-        <p className="text-sm sm:text-base text-gray-800 leading-relaxed mt-2">
+        <p className="text-sm md:text-lg text-gray-800 leading-relaxed mt-2">
           <strong className="text-cyan-600">Description:</strong><br />
           {book.description}
         </p>

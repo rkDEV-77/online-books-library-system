@@ -1,7 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
-//  <div className="bg-cyan-300 mt-[60px] sm:mt-[70px]"></div>
 
+import { Link } from "react-router-dom";
 
 
 const About = () => {

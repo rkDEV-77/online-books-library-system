@@ -5,12 +5,15 @@ import img from "../assets/open-book.png";
 const Header = () => {
   const [show, setShow] = useState(false);
 
+  // 
   const handleShow = () => {
     // console.log("show clicked");
 
+    // toggle Nav icon hamBurger to cross and reverse
     setShow((show) => !show);
   };
 
+  // inshorter screen after selecting list Link remove all hide all List
   const handleClick = () => {
     setShow(!show);
   };
@@ -31,7 +34,7 @@ const Header = () => {
         </Link>
       </div>
       <div className=" w-[40%] h-[270px] md:w-[75%] text-center flex flex-col items-center">
-        {/* for hamburger */}
+        {/* for hamburger icon in shorter Screen */}
         {show ? (
           <i
             class="fa-solid fa-xmark text-2xl border sm:text-3xl p-1 px-2 mt-2 text-pink-700"
@@ -43,7 +46,7 @@ const Header = () => {
             onClick={handleShow}
           ></i>
         )}
-        {/* hamburger navbar */}
+        {/* hamburger navbar for shorter screen */}
         {show && (
           <ul
             onClick={handleClick}

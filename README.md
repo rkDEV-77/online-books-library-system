@@ -11,9 +11,39 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
+# 🔹 How to Run Project
+
+## Install Node.js and npm
+
+Download from https://nodejs.org
+npm is included with Node.js.
+Open the Project Folder
+Use terminal or command prompt:
+cd path/to/project
+
+## Check for package.json
+
+Confirm it's a Node.js project and lists all dependencies and scripts.
+
+## Install Dependencies
+Run: npm install
+This installs everything needed to run the project.
+
+## Check the Start Script
+Look in package.json → "scripts" section
+Common commands: "start", "dev", etc.
+
+# Run the Development Server
+
+## Use one of the following depending on the script:
+
+npm run dev # for Vite, Rext.js, etc.
+
+## Open in Browser
+
+Go to the port shown in the terminal (e.g., 5173 for Vite)
 
 # LINK --> https://github.com/rkDEV-77/online-books-library-system.git
-
 
 # About Project
 
@@ -29,9 +59,10 @@ If you are developing a production application, we recommend using TypeScript wi
 -> Client-side routing using React Router
 -> 404 Page for invalid URLs
 
+# Components and Pages Working
 
-# Components and Pages Working 
 ## Home Page
+
 Functionality:
 The Home Page (/) is the entry point of the application.
 
@@ -57,12 +88,13 @@ Categories and popular books are pulled from a local data file or fetched via a 
 Clicking a category navigates the user to /books/:category.
 
 ## Browse Books Page
+
 Functionality:
 Displays a grid/list of books that can be filtered by category or search.
 
 Includes:
 
-A search bar to filter books by title or author.
+A search bar to filter books by title.
 
 Dynamic routing so users can access books by visiting URLs like /books/fiction.
 
@@ -77,9 +109,8 @@ Books are displayed by mapping over an array (stored in Redux or local state).
 
 The "View Details" button uses useNavigate() or a <Link> component to go to /books/details/:id.
 
-
-
 ## Book Details Page
+
 Functionality:
 Displays detailed information about a selected book:
 
@@ -102,9 +133,8 @@ Displays all relevant fields on the page.
 
 The "Back" button uses useNavigate(-1) or routes directly to /books.
 
-
-
 ## Add Book Page
+
 Functionality:
 Provides a form to add a new book to the library.
 
@@ -140,6 +170,7 @@ Dispatches a Redux action like addBook() to update the global book list.
 Uses useNavigate() to redirect to /books.
 
 ## 404 Page
+
 Functionality:
 A fallback route for any non-existent path.
 
@@ -151,13 +182,13 @@ How it works:
 Defined as a error route in React Router:
 
 # Technologies Used
+
 ## Frontend: React.js, HTML5, CSS3
 
 ## Routing: React Router DOM
 
 ## State Management: Redux Toolkit
 
-## Styling: CSS Modules / Tailwind CSS 
+## Styling: CSS Modules / Tailwind CSS
 
 ## Data: Dummy book data (JSON or local state)
-

@@ -7,39 +7,12 @@ import { UpdateLocalStorage } from '../utils/UpdateLocalStorage.jsx';
 
 // localStorage.setItem('books', JSON.stringify(books) )
 const HomePage = () => {
+
+  // Fetch Book data Using UpdateLocatStorage file
   const [books, setBooks] = UpdateLocalStorage()
-  //  const [books, setBooks] = useState([]);
+ 
 
 
-  //  useEffect(() => {
-  //   const stored = JSON.parse(localStorage.getItem('books')) || [];
-  //   setBooks(stored);
-  // }, []);
-
-  // console.log(books);
-  
-     
-      //  localStorage.setItem('books', JSON.stringify(books));  // set your value here
-      // const storedBooks = JSON.parse(localStorage.getItem('books'));
-      // console.log(storedBooks);
-      // console.log(books);
-     
-      
-      
-
-  //  useEffect(() => {
-  //   // This runs once when component mounts
-  //   localStorage.setItem('books', JSON.stringify(books));  // set your value here
-  // }, []);
-
-
-    // console.log(books);
-    // const categories = books.filter((book) =>(
-    //    console.log(book)
-       
-    // ))
-    // console.log(categories);
-    
     
   return (
     <div className='mt-[100px]'>

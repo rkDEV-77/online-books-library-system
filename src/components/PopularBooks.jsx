@@ -12,12 +12,6 @@ const PopularBooks = ({books}) => {
   return (
     <>
 
-    {/* // <div>
-    //   <h1>Popular Category of Books</h1>
-    //   { books.map((book) => (
-
-    // ))}
-    // </div> */}
      <h1 className="text-xl md:text-2xl font-bold text-center bg-cyan-500 p-3">POPULAR BOOKS (<span className="text-pink-700">{popular_books.length}</span>)</h1>
     <div className="flex flex-wrap justify-center items-center my-7 ">
 
@@ -28,40 +22,6 @@ const PopularBooks = ({books}) => {
         </Link>
 
 
-
-
-
-        // <div key={book.id} className="border flex flex-col w-[91%] sm:w-[43%] md:w-[21%] p-1 m-3 h-[310px] bg-cyan-300 hover:scale-105 transition duration-300">
-        // {/* // <div key={book.id}>{book.title}</div> */}
-        // <img
-        //   src={book.coverImage}
-        //   alt="book-cover"
-        //   width="300px"
-        //   height="250px"
-        //   className="bg-gray-300 object-fill w-[98%] md:w-[97%] h-[170px] sm:h-[120] md:h-[140px] m-auto mb-1  p-2 shadow-sm "
-        // />
-
-        
-        // <div className="bg-gray-300 w-[98%] md:w-[97%] h-[170px] md:h-[140px] flex flex-col justify-center items-center  text-sm    text-center m-auto  p-1 shadow-sm ">
-        //   <h2 className="p-1">
-        //     Title: <strong>{book.title}</strong>
-        //   </h2>
-        //   <h2 className="p-1">
-        //     Auther: <strong>{book.author}</strong>
-        //   </h2>
-        //   <p>
-        //     Published Date:{" "}
-        //     <strong className="text-sm">{book.publishedDate}</strong>
-        //   </p>
-        //   {/* <p>
-        //     Pages: <strong className="text-sm"> {book.pages}</strong>
-        //   </p> */}
-
-        //   {/* <p className=" text-wrap text-cyan-700 ">
-        //     Description: {book.description}
-        //   </p> */}
-        // </div>
-        // </div>
       ))}
     </div>
     </>

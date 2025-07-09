@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Contact = () => {
   const navigate = useNavigate()
 
+  // Handle form data dummy
   const handleSubmit  = () => {
     alert("Thank you for reaching out! We'll get back to you soon.");
     navigate("/")

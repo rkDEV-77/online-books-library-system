@@ -26,36 +26,10 @@ export const UpdateLocalStorage = () => {
     localStorage.setItem('books', JSON.stringify(books));
   }, [books]);
 
-  return [books, setBooks]; // Return both state and setter
+  return [books, setBooks]; // Return both state and setter function
 };
 
 
 
 
 
-
-
-
-
-// /////////////////////////////////////////////////////////////////////////////////
-// import { useEffect, useState } from "react";
-// import { booksData } from "./BookData";
-
-//   localStorage.setItem('books', JSON.stringify(booksData) )
-
-// export const UpdateLocalStorage = () => {
-//   const [books, setBooks] =  useState(JSON.parse(localStorage.getItem('books')) || []);
-//   console.log(books);
-//   console.log(booksData);
-  
-   
-//     useEffect(() => {
-//      const stored = JSON.parse(localStorage.getItem('books')) || [];
-//      setBooks(stored);
-//    }, []);
- 
-//   //  localStorage.setItem('books', JSON.stringify(books) )
-
-//   //  console.log(books);
-//    return books
-// };

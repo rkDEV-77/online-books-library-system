@@ -6,8 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Error from "./components/Error.jsx";
-// import BookLists from './components/BookLists.jsx'
-// import SearchBookList from "./components/SearchBookList.jsx";
 import BookDetails from "./components/BookDetails.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import AddBook from "./components/AddBook.jsx";

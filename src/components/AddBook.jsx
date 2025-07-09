@@ -10,6 +10,7 @@ const AddBook = () => {
    const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  // initialize form field state
   const [formData, setFormData] = useState({
     name: "",
     title: "",
@@ -23,23 +24,32 @@ const AddBook = () => {
     isPopular: false,
   });
 
+
+  // Handle input change and validations
   const handleChange = (e) => {
+    // Catching current input object values
     const { name, value, type, checked } = e.target;
 
+
+    // Checking if Description Limit the input to 30 words
     if (name === "description") {
-      const words = value.trim().split(/\s+/);
+      const words = value.trim().split("");
       if (words.length > 30) {
         alert("Description must be less than 30 words");
         return;
       }
     }
 
+
+    // Set the cuttent change values without affecting the previous value
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
   };
 
+
+// Handle Submit Form
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -55,13 +65,14 @@ const AddBook = () => {
       "rating",
     ];
 
+    // Validating presence of all input fields 
     for (let field of requiredFields) {
       if (!formData[field]) {
         alert(`Please fill out the "${field}" field.`);
         return;
       }
     }
-
+    // Convert to fraction and limit the input number
     const pages = parseInt(formData.pages);
     const rating = parseFloat(formData.rating);
 
@@ -75,6 +86,7 @@ const AddBook = () => {
       return;
     }
 
+    // dispatch action payload as form input
     dispatch(
       addBook({
         ...formData,
@@ -83,6 +95,7 @@ const AddBook = () => {
       })
     );
 
+    // Alert book ADded successfully
     alert("New Book Added Successfully!");
 
     setFormData({
@@ -98,127 +111,11 @@ const AddBook = () => {
       isPopular: false,
     });
 
+    // Afetr succesfully adding Book Navigate to browse_book page
     navigate("/browse_book");
   };
 
 
-
-
-  ///////////////////////////////////////////////// old
-  // const navigate = useNavigate();
-
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   title: "",
-  //   author: "",
-  //   publishedDate: "",
-  //   pages: "",
-  //   category: "",
-  //   coverImage: "",
-  //   description: "",
-  //   rating: "",
-  //   isPopular: false,
-  // });
-
-  // const handleChange = (e) => {
-  //   const { name, value, type, checked } = e.target;
-
-  //    // Limit description to 50 words
-  //    if (name === "description") {
-  //     // console.log(value);
-      
-  //   const words = value.trim().split(/\s+/);
-  //   // console.log(words);
-  //   // console.log(words.slice(0, 30).join(' '));
-  //   // console.log(value);
-    
-    
-    
-  //   if (words.length > 30) {
-  //     // return
-  //     alert('Description must we less than 30 words')
-  //     const value = words.slice(0, 30).join(' ') // prevent update if over 50 words
-  //     return value // prevent update if over 50 words
-  //   }
-  // }
-
-  //   setFormData((prev) => ({
-  //     ...prev,
-  //     [name]: type === "checkbox" ? checked : value,
-  //   }));
-
- 
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   // validating the form input fields or Check for empty required fields
-   
-  // const requiredFields = [
-  //   "name",
-  //   "title",
-  //   "author",
-  //   "publishedDate",
-  //   "pages",
-  //   "category",
-  //   "coverImage",
-  //   "description",
-  //   "rating"
-  // ];
-
-  // for (let field of requiredFields) {
-  //   if (!formData[field]) {
-  //     alert(`Please fill out the "${field}" field.`);
-  //     return;
-  //   }
-  // }
-
-  // // Additional numeric validation
-  // const pages = parseInt(formData.pages);
-
-  // if (isNaN(pages) || pages <= 0) {
-  //   alert("Please enter a valid number of pages.");
-  //   return;
-  // }
-
-  
-
-
-  //   const newBook = {
-  //     id: uuidv4(), // Unique ID
-  //     ...formData,
-  //     pages: parseInt(formData.pages),
-  //     rating: parseFloat(formData.rating),
-  //   };
-
-  //   const existingBooks = JSON.parse(localStorage.getItem("books")) || [];
-  //   // console.log(existingBooks);
-  //   // console.log(newBook);
-    
-    
-  //   const updatedBooks = [...existingBooks, newBook];
-  //   // console.log(updatedBooks);
-    
-  //   localStorage.setItem("books", JSON.stringify(updatedBooks));
-  //   // make form field empty after submission
-  //    setFormData({
-  //   name: "",
-  //   title: "",
-  //   author: "",
-  //   publishedDate: "",
-  //   pages: "",
-  //   category: "",
-  //   coverImage: "",
-  //   description: "",
-  //   rating: "",
-  //   isPopular: false,
-  // });
-
-  //   alert(" New Book Added Successfully!");
-  //   // navigate("/"); // Adjust if needed
-  //   navigate("/browse_book")
-  // };
 
   return (
     <div className="w-screen mt-[90px] p-5">

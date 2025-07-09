@@ -8,7 +8,7 @@ const BookCategory = ({books}) => {
   // const {books, setBooks} = UpdateLocalStorage()
   // console.log(books);
   
-
+  // Get all category value in an array
     let categories = books.map((book)=>(
              book.category
         ))
@@ -17,6 +17,7 @@ const BookCategory = ({books}) => {
         
 
         // console.log(categories);
+        // Make all books category unique values
     let single_category = [...new Set(categories)]
     // console.log(single_category);
     

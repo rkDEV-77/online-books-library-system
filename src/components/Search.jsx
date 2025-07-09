@@ -13,6 +13,7 @@ const Search = () => {
   // console.log(search);
  
 
+  // Search all books having similar title
   const handleInput = (inputValue) => {
     
     setInput(inputValue);
@@ -24,16 +25,9 @@ const Search = () => {
     setSearch(filteredBook);
   };
 
+  // Reset the input on click in search input
   const handleSearch = () => {
-    // Use event.PreventDefault with onSubmit not with onClick
-    // e.preventDefault()
-    // console.log('input', input);
-    // let filteredBook = books.filter((book) =>
-    //   book.title.toLocaleLowerCase().includes(input.toLocaleLowerCase())
-    // );
-    // console.log(filteredBook);
-
-    // setSearch(filteredBook);
+  
     setInput("");
   };
 
@@ -56,14 +50,7 @@ const Search = () => {
             className="w-[50%] md:w-[60%] h-9 md:h-10  bg-white p-3 rounded-l-md shadow-md border-2 border-gray-50 focus:border-gray-300 focus:outline-none"
           />
 
-          {/* <button
-            className="w-[30%] h-8  md:h-10 font-bold text-md bg-gray-300 hover:bg-pink-300 text-gray-600 hover:text-white rounded-md  ml-1 shadow-md transition duration-300 cursor-pointer"
-            //   onClick={(e)=>handleSearch(e)}
-            onClick={handleSearch}
-          >
-            Search
-          </button> */}
-        {/* </div> */}
+      
         <button
             className="w-[17%] md:w-[13%] h-9  md:h-10 font-bold text-md bg-gray-300 hover:bg-pink-300 text-gray-600 hover:text-white rounded-r-md  shadow-md transition duration-300 cursor-pointer"
             //   onClick={(e)=>handleSearch(e)}
