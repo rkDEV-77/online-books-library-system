@@ -15,10 +15,10 @@ const Contact = () => {
     <section className="bg-transparent w-screen h-[150%] py-11 px-1 flex items-center justify-center mt-[60px]">
       <div className="gradient w-[70%] mx-auto rounded-xl shadow-lg p-7 md:p-13 py-22">
 
-        <h1 className="text-4xl font-bold text-indigo-600 mb-6 text-center">
-          Get in Touch 📬
+        <h1 className="text-4xl font-bold text-cyan-800 mb-6 text-center">
+          Get in Touch 
         </h1>
-        <h2 className="text-center text-xl text-gray-600 mb-10">
+        <h2 className="text-center text-xl text-gray-800 mb-10">
           Have questions, suggestions, or just want to say hi? We'd love to hear from you!
         </h2>
 

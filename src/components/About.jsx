@@ -19,7 +19,7 @@ const About = () => {
 
         {/* Text Section */}
         <div>
-          <h1 className="text-4xl sm:text-5xl text-center md:text-start  font-extrabold mb-6 bg-gradient-to-r from-teal-400 to-cyan-700 text-transparent bg-clip-text">
+          <h1 className="text-4xl sm:text-5xl text-center md:text-start  font-extrabold mb-6 bg-gradient-to-r from-teal-500 to-cyan-700 text-transparent bg-clip-text">
             About BookApp
           </h1>
           <p className="text-lg text-gray-800 mb-4 leading-relaxed">
