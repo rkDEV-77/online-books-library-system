@@ -1,14 +1,16 @@
 
-import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { UpdateLocalStorage } from "../utils/UpdateLocalStorage";
+import { useSelector } from "react-redux";
+
 
 const BookDetails = () => {
   const navigate = useNavigate();
   const params = useParams();
 
-  // fetching data from UpdateLocalStorage component
-  const [books, setBooks] = UpdateLocalStorage();
+ 
+
+  // const books = booksData;
+  const books = useSelector((state)=>state.books)
 
   // filter book with Id
   const bookDetails = books.filter((book) => book.id == params.id);

@@ -2,13 +2,14 @@
 
 import { Link, useNavigate, useParams } from "react-router-dom";
 import BookCard from "./BookCard";
-import { UpdateLocalStorage } from "../utils/UpdateLocalStorage";
+import { booksData } from "../utils/BookData";
+
 
 function SingleCategory() {
   const navigate = useNavigate();
   const { category } = useParams();
 
-  const [books, setBooks] = UpdateLocalStorage();
+  const books = booksData;
 
   // filtering books having same category
   const filteredBooks = books.filter(

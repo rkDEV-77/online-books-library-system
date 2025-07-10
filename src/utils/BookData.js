@@ -1,18 +1,19 @@
 export const booksData = [
 
-   {
+  {
     "id": 1,
-    "name": "the-time-loop",
-    "title": "The Time Loop",
-    "author": "Clara Henson",
-    "publishedDate": "2010-03-12",
-    "pages": 328,
-    "category": "Sci-Fi",
-    "coverImage": "https://images.unsplash.com/photo-1641260199871-1c7145f3fc3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
-    "description": "An intriguing sci-fi story about a scientist trapped in a repeating timeline.",
-    "rating": 4.5,
+    "name": "Geeta",
+    "title": "Bhagwat Geeta",
+    "author": "Vayas",
+    "publishedDate": "007-07-07",
+    "pages": 786,
+    "category":  "Time Travel",
+    "coverImage": "https://media.istockphoto.com/id/2176068996/photo/indian-god-mahakal-ride-on-chariot-white-statue.webp?a=1&b=1&s=612x612&w=0&k=20&c=bkJ754YYhtTh1zAufqYME6clKOE5AAF4ODbpjJ5bAg8=",
+    "description": "भगवद गीता (जिसे अक्सर गीता भी कहा जाता है) का शाब्दिक अर्थ है भगवान का गीत. यह कुरुक्षेत्र के युद्ध के दौरान अर्जुन को भगवान कृष्ण द्वारा सुनाई गई",
+    "rating": 4.7,
     "isPopular": true
   },
+
   {
     "id": 2,
     "name": "neural-shadows",
@@ -648,6 +649,19 @@ export const booksData = [
     "coverImage": "https://images.unsplash.com/photo-1637087788275-9b328d83ad36?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0OXx8fGVufDB8fHx8fA%3D%3D",
     "description": "An explorer finds an alien relic that reshapes her memories.",
     "rating": 4.6,
+    "isPopular": true
+  },
+    {
+    "id": 51,
+    "name": "the-time-loop",
+    "title": "The Time Loop",
+    "author": "Clara Henson",
+    "publishedDate": "2010-03-12",
+    "pages": 328,
+    "category": "Sci-Fi",
+    "coverImage": "https://images.unsplash.com/photo-1641260199871-1c7145f3fc3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+    "description": "An intriguing sci-fi story about a scientist trapped in a repeating timeline.",
+    "rating": 4.5,
     "isPopular": true
   }
 

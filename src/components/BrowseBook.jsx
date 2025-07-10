@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
-// import { books } from "../utils/BookData";
+import { useEffect, useState } from "react";
+
 import { Link, useParams } from "react-router-dom";
 import Search from "./Search";
-// import { UpdateLocalStorage } from "../utils/UpdateLocalStorage";
+import { useSelector } from "react-redux";
+
 
 
 const BrowseBook = () => {
-  // const [search, setSearch] = useState([]);
-  // const [books, setBooks] = useState([]);
+ 
+
+   let books = useSelector((state) => state.books);
+
+  // console.log(books);
   
   const [selectedCategory, setSelectedCategory] = useState("All");
-  let books = JSON.parse(localStorage.getItem('books'))
-  // console.log(books);
 
 
   // Extract unique categories

@@ -1,12 +1,9 @@
-import React from 'react'
-// import{ books} from "../utils/BookData.js"
+
 import { Link } from 'react-router-dom'
-// import { UpdateLocalStorage } from '../utils/UpdateLocalStorage'
 
 const BookCategory = ({books}) => {
 
-  // const {books, setBooks} = UpdateLocalStorage()
-  // console.log(books);
+  
   
   // Get all category value in an array
     let categories = books.map((book)=>(

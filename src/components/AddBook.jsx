@@ -33,8 +33,8 @@ const AddBook = () => {
 
     // Checking if Description Limit the input to 30 words
     if (name === "description") {
-      const words = value.trim().split("");
-      if (words.length > 30) {
+      const words = value.trim().split(/\s+/);
+      if (words.length > 40) {
         alert("Description must be less than 30 words");
         return;
       }
@@ -121,7 +121,7 @@ const AddBook = () => {
     <div className="w-screen mt-[90px] p-5">
       <form
         onSubmit={handleSubmit}
-        className="max-w-xl mx-auto bg-gray-200 shadow-md rounded px-8 pt-6 pb-5"
+        className="gradient max-w-xl mx-auto bg-gray-200 shadow-md rounded px-8 pt-6 pb-5"
       >
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Add Book Details</h2>
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
-// import { books } from '../utils/Data'
-// import { books } from "../utils/BookData";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
  
 
@@ -8,7 +7,7 @@ const Search = () => {
   const [input, setInput] = useState("");
   const [search, setSearch] = useState([]);
 
-  let books = JSON.parse(localStorage.getItem('books'))
+  let books = useSelector((state)=>state.books)
   // console.log(input);
   // console.log(search);
  

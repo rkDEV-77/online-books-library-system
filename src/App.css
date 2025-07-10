@@ -57,7 +57,7 @@ body {
 }
 
 .gradient{
-    background: linear-gradient(90deg, rgb(41, 169, 228) 0%, hsla(183, 65%, 54%, 1) 100%);
+    background: linear-gradient(90deg, rgb(41, 169, 228) 0%, rgb(229, 140, 210) 100%);
 }
 
 /* 
@@ -97,3 +97,4 @@ body {
   /* text-shadow: 4px 3px 1px #CCCCCC; */
   text-shadow: -1px 2px 1px #737272;
 }
+

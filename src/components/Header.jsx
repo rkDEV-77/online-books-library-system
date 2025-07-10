@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import img from "../assets/open-book.png";
 
 const Header = () => {
   const [show, setShow] = useState(false);
 
-  // 
+  //
   const handleShow = () => {
     // console.log("show clicked");
 
@@ -81,31 +81,61 @@ const Header = () => {
         )}
         {/* full screen nav bar */}
         <ul className="hamburger hidden  text-center lg:text-2xl w-[85%]  h-[60px] gap-3 mt-13   md:p-2 ml-1  md:flex flex-col justify-center items-center md:flex-row md:justify-center md:items-center   bg-pink-300 md:bg-transparent gap-x-3 md:gap-x-5 lg:gap-x-7  font-bold text-gray-700 sm:text-xl ">
-          <Link to="/">
-            <li className="hover:text-cyan-300 transition duration-300 ">
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400 font-bold" : " hover:text-cyan-700"
+              }
+            >
               Home
-            </li>
-          </Link>
-          <Link to="/browse_book">
-            <li className="hover:text-cyan-300 transition duration-300 ">
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/browse_book"
+              end
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400 font-bold" : " hover:text-cyan-700"
+              }
+            >
               BrowseBook
-            </li>
-          </Link>
-          <Link to="/add_book">
-            <li className="hover:text-cyan-300 transition duration-300 ">
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/add_book"
+              end
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400 font-bold" : " hover:text-cyan-700"
+              }
+            >
               AddBook
-            </li>
-          </Link>
-          <Link to="/about">
-            <li className="hover:text-cyan-300 transition duration-300">
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              end
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400 font-bold" : " hover:text-cyan-700"
+              }
+            >
               About
-            </li>
-          </Link>
-          <Link to="/contact">
-            <li className="hover:text-cyan-300 transition duration-300">
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              end
+              className={({ isActive }) =>
+                isActive ? "text-yellow-400 font-bold" : " hover:text-cyan-700"
+              }
+            >
               Contact
-            </li>
-          </Link>
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>
